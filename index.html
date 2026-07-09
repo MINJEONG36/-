@@ -3,215 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>삿포로 주요 여행지 추천</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Noto Sans KR -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <title>삿포로 4박 5일 여행 일정</title>
     <style>
         body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f8fafc;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1a5f7a;
+            margin-bottom: 30px;
+        }
+        .day-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .day-header {
+            background-color: #227c9d;
+            color: white;
+            padding: 15px 20px;
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .place {
+            display: flex;
+            padding: 20px;
+        }
+        /* 깨지지 않는 사진 자리 만들기 */
+        .image-placeholder {
+            width: 160px;
+            height: 120px;
+            background-color: #d1d8e0;
+            border-radius: 8px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #778ca3;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .place-info {
+            flex: 1;
+        }
+        .place-info h3 {
+            margin: 0 0 5px 0;
+            color: #118ab2;
+        }
+        /* 위치 정보 스타일 */
+        .location {
+            font-size: 0.85em;
+            color: #e76f51;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .place-info p {
+            margin: 5px 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e0fbfc;
+            color: #0077b6;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        /* 이동 시간 표시 스타일 */
+        .travel-connector {
+            background-color: #f8f9fa;
+            color: #2a9d8f;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            border-top: 1px dashed #ccc;
+            border-bottom: 1px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
-        .hero-pattern {
-            background-color: #1e3a8a;
-            background-image: radial-gradient(#3b82f6 1px, transparent 1px);
-            background-size: 20px 20px;
+        @media (max-width: 600px) {
+            .place { flex-direction: column; }
+            .image-placeholder { 
+                width: 100%; 
+                height: 200px; 
+                margin-bottom: 15px; 
+            }
         }
     </style>
 </head>
-<body class="text-slate-800 antialiased">
+<body>
 
-    <!-- Header / Navbar -->
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="plane-takeoff" class="text-blue-600 w-6 h-6"></i>
-                    <span class="font-bold text-xl tracking-tight text-slate-900">Sapporo<span class="text-blue-600">Trip</span></span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-slate-600 hover:text-blue-600 font-medium transition">홈</a>
-                    <a href="#destinations" class="text-blue-600 font-medium transition">추천 명소</a>
-                    <a href="#" class="text-slate-600 hover:text-blue-600 font-medium transition">여행 팁</a>
-                </div>
-                <button class="md:hidden text-slate-600 hover:text-blue-600">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+<div class="container">
+    <h1>❄️ 삿포로 4박 5일 핵심 여행 일정</h1>
+
+    <!-- 1일차 -->
+    <div class="day-card">
+        <h2 class="day-header">Day 1: 도심의 매력과 미식 탐방</h2>
+        
+        <div class="place">
+            <div class="image-placeholder">오도리 공원<br>사진 자리</div>
+            <div class="place-info">
+                <h3>오도리 공원</h3>
+                <div class="location">📍 주오구 (삿포로 도심 중심부)</div>
+                <p>삿포로 도심을 가로지르는 광활한 공원입니다.[cite: 1]</p>
+                <span class="tag">눈축제, 비어 가든 등 주요 축제 개최지</span>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-pattern relative text-white pt-24 pb-32">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/90"></div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-blue-500/30 border border-blue-400/50 text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
-                HOKKAIDO, JAPAN
-            </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                삿포로 주요 여행지 추천
-            </h1>
-            <p class="text-lg md:text-xl text-blue-100 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
-                삿포로의 매력을 다양하게 느낄 수 있는 대표적인 여행지들을 정리했습니다. 
-                각 여행지의 특징과 주요 포인트를 참고하여 즐거운 여행 계획을 세워보세요.
-            </p>
-            <a href="#destinations" class="inline-flex items-center gap-2 bg-white text-blue-700 hover:bg-blue-50 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                명소 둘러보기
-                <i data-lucide="arrow-down" class="w-4 h-4"></i>
-            </a>
+        <div class="travel-connector">
+            ⬇️ 도보 약 3분 소요 
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="destinations" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">추천 명소 상세 정보</h2>
-            <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
-        </div>
-
-        <!-- Grid Container for Destinations -->
-        <div id="destinations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Cards will be dynamically inserted here by JavaScript -->
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex justify-center items-center gap-2 mb-4">
-                <i data-lucide="plane-takeoff" class="text-slate-400 w-5 h-5"></i>
-                <span class="font-bold text-lg text-white">SapporoTrip</span>
+        
+        <div class="place">
+            <div class="image-placeholder">TV 타워<br>사진 자리</div>
+            <div class="place-info">
+                <h3>삿포로 TV 타워</h3>
+                <div class="location">📍 오도리 공원 동쪽 끝</div>
+                <p>오도리 공원 동쪽 끝에 자리한 삿포로의 랜드마크입니다.[cite: 1]</p>
+                <span class="tag">탁 트인 시내 전경 전망대</span> <span class="tag">아름다운 라이트업 야경</span>
             </div>
-            <p class="text-sm text-slate-500 mb-6">성공적인 홋카이도 여행을 위한 최고의 가이드</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-slate-400 hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                <a href="#" class="text-slate-400 hover:text-white transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                <a href="#" class="text-slate-400 hover:text-white transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-            </div>
-            <p class="mt-8 text-xs text-slate-600">&copy; 2026 Sapporo Travel Guide. All rights reserved.</p>
         </div>
-    </footer>
 
-    <!-- JavaScript to render data -->
-    <script>
-        // PDF에서 추출한 여행지 데이터
-        const destinationsData = [
-            {
-                name: "오도리 공원",
-                desc: "삿포로 도심을 가로지르는 광활한 공원",
-                points: ["도심 속 산책로", "눈축제, 비어 가든 등 주요 축제 개최지"],
-                icon: "tree-pine"
-            },
-            {
-                name: "삿포로 TV 타워",
-                desc: "오도리 공원 동쪽 끝에 자리한 삿포로의 랜드마크",
-                points: ["탁 트인 시내 전경을 감상할 수 있는 전망대", "아름다운 라이트업 야경"],
-                icon: "radio-tower"
-            },
-            {
-                name: "삿포로 맥주 박물관",
-                desc: "삿포로 맥주의 변천사를 볼 수 있는 옛 공장 건물",
-                points: ["이국적인 붉은 벽돌 건축물", "신선한 맥주 시음(유료) 및 투어"],
-                icon: "beer"
-            },
-            {
-                name: "시로이코이비토 파크",
-                desc: "홋카이도 명과 '시로이 고이비토' 초콜릿 테마파크",
-                points: ["과자 제조 공정 견학", "동화 같은 정원과 놀이기구가 있는 가족 명소"],
-                icon: "cookie"
-            },
-            {
-                name: "모이와 산",
-                desc: "삿포로 최고의 파노라마 야경을 감상할 수 있는 산봉우리",
-                points: ["케이블카를 이용한 낭만적인 이동", "삿포로 시내의 환상적인 야경 조망"],
-                icon: "mountain"
-            },
-            {
-                name: "스스키노",
-                desc: "도쿄 이북에서 가장 큰 규모를 자랑하는 최대 번화가",
-                points: ["라멘, 징기스칸 등 미식 탐방", "화려한 네온사인과 활기찬 밤문화"],
-                icon: "utensils"
-            },
-            {
-                name: "니조 시장",
-                desc: "삿포로 도심 한가운데 위치한 전통 수산 시장",
-                points: ["갓 수확한 신선한 홋카이도 농수산물 판매", "카이센동(해산물 덮밥) 등 활기찬 시장 식당"],
-                icon: "store"
-            },
-            {
-                name: "홋카이도 신궁",
-                desc: "울창한 숲속에 자리 잡은 홋카이도 최대 규모의 신사",
-                points: ["고요하고 평화로운 자연 속 일본 전통 건축물", "벚꽃 및 단풍 명소"],
-                icon: "tent-tree"
-            },
-            {
-                name: "삿포로후시미이나리 신사",
-                desc: "27개의 붉은색 도리이 문이 줄지어 서 있는 유서 깊은 신사",
-                points: ["붉은 도리이가 늘어선 매력적인 포토존", "숲속에서 즐기는 조용한 산책"],
-                icon: "map-pin"
-            }
-        ];
+        <div class="travel-connector">
+            ⬇️ 지하철 약 5분 (또는 도보 15분) 소요
+        </div>
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const gridContainer = document.getElementById('destinations-grid');
+        <div class="place">
+            <div class="image-placeholder">스스키노<br>사진 자리</div>
+            <div class="place-info">
+                <h3>스스키노</h3>
+                <div class="location">📍 주오구 스스키노역 일대</div>
+                <p>도쿄 이북에서 가장 큰 규모를 자랑하는 최대 번화가입니다.[cite: 1]</p>
+                <span class="tag">라멘, 징기스칸 등 미식 탐방</span> <span class="tag">화려한 네온사인과 활기찬 밤문화</span>
+            </div>
+        </div>
+    </div>
 
-            // 카드 렌더링
-            const cardsHTML = destinationsData.map(dest => `
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
-                    
-                    <!-- Image Placeholder Section -->
-                    <div class="h-56 bg-slate-200 relative overflow-hidden flex items-center justify-center">
-                        <div class="absolute inset-0 bg-slate-300 group-hover:scale-105 transition-transform duration-500"></div>
-                        <span class="relative z-10 text-slate-500 font-medium tracking-wide bg-white/70 px-4 py-2 rounded-lg backdrop-blur-sm shadow-sm">
-                                                    </span>
-                    </div>
-                    
-                    <!-- Content Section -->
-                    <div class="p-6 flex-grow flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <div class="bg-blue-100 p-2 rounded-lg text-blue-600">
-                                <i data-lucide="${dest.icon}" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">${dest.name}</h3>
-                        </div>
-                        
-                        <p class="text-slate-600 mb-6 flex-grow leading-relaxed">
-                            ${dest.desc}
-                        </p>
-                        
-                        <!-- Key Points -->
-                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                            <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-1.5">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> 주요 포인트
-                            </h4>
-                            <ul class="space-y-2.5">
-                                ${dest.points.map(point => `
-                                    <li class="text-sm text-slate-600 flex items-start gap-2 leading-snug">
-                                        <span class="text-blue-400 mt-0.5 text-lg leading-none">•</span>
-                                        <span>${point}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
+    <!-- 2일차 -->
+    <div class="day-card">
+        <h2 class="day-header">Day 2: 고즈넉한 신사와 파노라마 야경</h2>
+        
+        <div class="place">
+            <div class="image-placeholder">홋카이도 신궁<br>사진 자리</div>
+            <div class="place-info">
+                <h3>홋카이도 신궁</h3>
+                <div class="location">📍 마루야마 공원 내</div>
+                <p>울창한 숲속에 자리 잡은 홋카이도 최대 규모의 신사입니다.[cite: 1]</p>
+                <span class="tag">고요하고 평화로운 자연 속 일본 전통 건축물</span> <span class="tag">벚꽃 및 단풍 명소</span>
+            </div>
+        </div>
 
-            gridContainer.innerHTML = cardsHTML;
+        <div class="travel-connector">
+            ⬇️ 버스 + 도보 약 30분 소요
+        </div>
 
-            // Initialize Lucide Icons after injecting HTML
-            lucide.createIcons();
-        });
-    </script>
+        <div class="place">
+            <div class="image-placeholder">후시미이나리<br>사진 자리</div>
+            <div class="place-info">
+                <h3>삿포로후시미이나리 신사</h3>
+                <div class="location">📍 주오구 후시미 지역</div>
+                <p>27개의 붉은색 도리이 문이 줄지어 서 있는 유서 깊은 신사입니다.[cite: 1]</p>
+                <span class="tag">붉은 도리이가 늘어선 매력적인 포토존</span> <span class="tag">숲속에서 즐기는 조용한 산책</span>
+            </div>
+        </div>
+
+        <div class="travel-connector">
+            ⬇️ 시영 전차 + 무료 셔틀버스 약 25분 소요
+        </div>
+
+        <div class="place">
+            <div class="image-placeholder">모이와 산<br>사진 자리</div>
+            <div class="place-info">
+                <h3>모이와 산</h3>
+                <div class="location">📍 주오구 모이와야마 (로프웨이 탑승)</div>
+                <p>삿포로 최고의 파노라마 야경을 감상할 수 있는 산봉우리입니다.[cite: 1]</p>
+                <span class="tag">케이블카를 이용한 낭만적인 이동</span> <span class="tag">삿포로 시내의 환상적인 야경 조망</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3일차 -->
+    <div class="day-card">
+        <h2 class="day-header">Day 3: 달콤한 디저트와 시원한 맥주</h2>
+        
+        <div class="place">
+            <div class="image-placeholder">시로이코이비토<br>사진 자리</div>
+            <div class="place-info">
+                <h3>시로이코이비토 파크</h3>
+                <div class="location">📍 니시구 미야노사와</div>
+                <p>홋카이도 명과 '시로이 고이비토' 초콜릿 테마파크입니다.[cite: 1]</p>
+                <span class="tag">과자 제조 공정 견학</span> <span class="tag">동화 같은 정원과 놀이기구가 있는 가족 명소</span>
+            </div>
+        </div>
+
+        <div class="travel-connector">
+            ⬇️ 도자이선 지하철 + 버스 약 45분 소요
+        </div>
+
+        <div class="place">
+            <div class="image-placeholder">맥주 박물관<br>사진 자리</div>
+            <div class="place-info">
+                <h3>삿포로 맥주 박물관</h3>
+                <div class="location">📍 히가시구 (삿포로역 동쪽)</div>
+                <p>삿포로 맥주의 변천사를 볼 수 있는 옛 공장 건물입니다.[cite: 1]</p>
+                <span class="tag">이국적인 붉은 벽돌 건축물</span> <span class="tag">신선한 맥주 시음(유료) 및 투어</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4일차 -->
+    <div class="day-card">
+        <h2 class="day-header">Day 4: 신선한 해산물과 쇼핑</h2>
+        
+        <div class="place">
+            <div class="image-placeholder">니조 시장<br>사진 자리</div>
+            <div class="place-info">
+                <h3>니조 시장</h3>
+                <div class="location">📍 주오구 (오도리역 인근)</div>
+                <p>삿포로 도심 한가운데 위치한 전통 수산 시장입니다.[cite: 1]</p>
+                <span class="tag">갓 수확한 신선한 홋카이도 농수산물 판매</span> <span class="tag">카이센동(해산물 덮밥) 등 활기찬 시장 식당</span>
+            </div>
+        </div>
+        
+        <div class="travel-connector">
+            ⬇️ 도보 약 10분 소요
+        </div>
+
+        <div class="place">
+            <div class="image-placeholder">자유 일정<br>사진 자리</div>
+            <div class="place-info">
+                <h3>다누키코지 & 삿포로역 지하상가 (자유시간)</h3>
+                <div class="location">📍 주오구 다누키코지 ~ 삿포로역 연결통로</div>
+                <p>여행의 마지막 날, 기념품과 드럭스토어 쇼핑을 자유롭게 즐겨보세요.</p>
+                <span class="tag">쇼핑 및 카페 투어</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
